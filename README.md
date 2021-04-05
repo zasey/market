@@ -1,7 +1,6 @@
 <h1>Simple internet-market</h1>
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8c0bd51bdba44e04bd2cbbfd7f643e9f)](https://www.codacy.com/manual/aleksey-lukyanets/market?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aleksey-lukyanets/market&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/8c0bd51bdba44e04bd2cbbfd7f643e9f)](https://www.codacy.com/manual/aleksey-lukyanets/market?utm_source=github.com&utm_medium=referral&utm_content=aleksey-lukyanets/market&utm_campaign=Badge_Coverage)
 ![build](https://github.com/aleksey-lukyanets/market/workflows/build/badge.svg)
 
 This project was started in 2014 as a study for Spring and related web technologies,
@@ -59,8 +58,8 @@ This is not a perfectly finished project, so it may contain bugs, imperfection a
 
 <h2>Legacy branches</h2>
 
+<p><code>jsp-2021</code> - status with web views based on JSP and Apache Tiles, before moving to Thymeleaf
 <p><code>good-old-2014</code> - status for 2014
-<p><code>jsp-2021</code> - status with web views based on JSP and Apache Tiles
 
 <h2>Links</h2>
 

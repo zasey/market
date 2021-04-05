@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - divide-the-project-to-modules
   release:
     types: [published, created, edited]
 
