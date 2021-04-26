@@ -11,6 +11,7 @@ public class RegionDTO extends RepresentationModel<RegionDTO> {
 	private String subtitle;
 	private String description;
 	private String color;
+	private Long population;
 
 	public Long getId() {
 		return id;
@@ -34,6 +35,14 @@ public class RegionDTO extends RepresentationModel<RegionDTO> {
 
 	public void setSubtitle(String subtitle) {
 		this.subtitle = subtitle;
+	}
+
+	public Long getPopulation() {
+		return population;
+	}
+
+	public void setPopulation(Long population) {
+		this.population = population;
 	}
 
 	public String getDescription() {
@@ -61,12 +70,13 @@ public class RegionDTO extends RepresentationModel<RegionDTO> {
 			Objects.equals(name, regionDTO.name) &&
 			Objects.equals(subtitle, regionDTO.subtitle) &&
 			Objects.equals(description, regionDTO.description) &&
-			Objects.equals(color, regionDTO.color);
+			Objects.equals(color, regionDTO.color) &&
+			Objects.equals(population, regionDTO.population);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name, subtitle, description, color);
+		return Objects.hash(id, name, subtitle, description, color, population);
 	}
 
 	@Override
@@ -77,6 +87,7 @@ public class RegionDTO extends RepresentationModel<RegionDTO> {
 			", subtitle='" + subtitle + '\'' +
 			", description='" + description + '\'' +
 			", color='" + color + '\'' +
+			", population='" + population + '\'' +
 			'}';
 	}
 }

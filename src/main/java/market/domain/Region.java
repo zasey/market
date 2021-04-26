@@ -45,8 +45,18 @@ public class Region implements Serializable {
 	@Pattern(regexp = "^(a-z|A-Z|0-9-)*[^#$%^&*()']*$")
 	private String color;
 
+	@Column(name = "population")
+	private Long population;
 	public Long getId() {
 		return id;
+	}
+
+	public Long getPopulation() {
+		return population;
+	}
+
+	public void setPopulation(Long population) {
+		this.population = population;
 	}
 
 	public void setId(Long id) {
@@ -94,7 +104,8 @@ public class Region implements Serializable {
 			Objects.equals(name, region.name) &&
 			Objects.equals(subtitle, region.subtitle) &&
 			Objects.equals(description, region.description) &&
-			Objects.equals(color, region.color);
+			Objects.equals(color, region.color)&&
+			Objects.equals(population, region.population);
 	}
 
 	@Override
@@ -108,7 +119,7 @@ public class Region implements Serializable {
 		private String subtitle;
 		private String description;
 		private String color;
-
+		private Long population;
 		public Builder() {
 		}
 
@@ -118,6 +129,7 @@ public class Region implements Serializable {
 			subtitle = region.subtitle;
 			description = region.description;
 			color = region.color;
+			population = region.population;
 		}
 
 		public Region build() {
@@ -127,7 +139,13 @@ public class Region implements Serializable {
 			region.subtitle = subtitle;
 			region.description = description;
 			region.color = color;
+			region.population = population;
 			return region;
+		}
+
+		public Builder setPopulation(Long population) {
+			this.population = population;
+			return this;
 		}
 
 		public Builder setId(Long id) {

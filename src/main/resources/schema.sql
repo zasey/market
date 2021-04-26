@@ -76,7 +76,8 @@ CREATE TABLE region (
     name character varying(20) NOT NULL,
     subtitle character varying(20),
     color character varying(10),
-    description character varying(1000)
+    description character varying(1000),
+    population bigint
 );
 
 DROP TABLE IF EXISTS role;

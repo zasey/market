@@ -79,7 +79,7 @@ public class CartServiceTest {
 		when(cartDAO.save(any(Cart.class)))
 			.thenReturn(cart);
 		when(cartDAO.findById(userAccount.getId()))
-			.thenReturn(Optional.empty());
+			.thenReturn(Optional.of(new Cart(userAccount)));
 
 		Cart createdCart = cartService.getCartOrCreate(userAccount.getEmail());
 

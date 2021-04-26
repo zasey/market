@@ -18,6 +18,7 @@
 			<tr>
 				<th>id</th>
 				<th>название</th>
+				<th>Население</th>
 				<th>подзаголовок</th>
 				<th>описание</th>
 				<th>цвет</th>
@@ -30,6 +31,7 @@
 
 				<td th:text="${region.id}"></td>
 				<td th:text="${region.name}"></td>
+				<td th:text="${region.population}"></td>
 				<td th:text="${region.subtitle}"></td>
 				<td style="max-width:200px;">
 					<span th:text="${shortDesc}"></span>

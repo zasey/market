@@ -30,6 +30,7 @@ public class RegionServiceImpl implements RegionService {
 	@Transactional(readOnly = true)
 	@Override
 	public Region findOne(long regionId) {
+		System.out.println("findOne inside!!!");
 		return regionDAO.findById(regionId).orElse(null);
 	}
 

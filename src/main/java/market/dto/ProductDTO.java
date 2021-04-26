@@ -2,6 +2,8 @@ package market.dto;
 
 import org.springframework.hateoas.RepresentationModel;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -10,7 +12,8 @@ import javax.validation.constraints.Pattern;
 import java.util.Objects;
 
 public class ProductDTO extends RepresentationModel<ProductDTO> {
-
+	@Id
+	@GeneratedValue
 	private Long productId;
 
 	private String distillery;

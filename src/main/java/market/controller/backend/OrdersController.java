@@ -29,7 +29,7 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 @Controller
-@RequestMapping("/admin/orders")
+@RequestMapping(path = "/admin/orders", method = RequestMethod.GET)
 @Secured({"ROLE_STAFF", "ROLE_ADMIN"})
 public class OrdersController {
 	private static final String ORDERS_BASE = "admin/orders";
@@ -47,7 +47,7 @@ public class OrdersController {
 		orderSorting = new OrderSorting(paginationProperties.getBackendOrder());
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+
 	public String getOrders(
 		SortingValuesDTO sortingValues,
 		@RequestParam(value = "executed", required = false, defaultValue = "all") String executed,
@@ -58,7 +58,7 @@ public class OrdersController {
 		Page<Order> page = orderService.fetchFiltered(executed, created, request);
 		orderSorting.prepareModel(model, page.map(orderDtoAssembler::toModel));
 		List<Order> orders = page.getContent();
-
+		System.out.println("getOrders!!");
 		Map<Long, List<OrderedProductDTO>> orderedProductsMap = new HashMap<>();
 		for (Order order : orders) {
 			List<OrderedProductDTO> productsDto = order.getOrderedProducts().stream()

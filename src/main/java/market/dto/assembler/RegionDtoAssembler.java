@@ -21,6 +21,7 @@ public class RegionDtoAssembler extends RepresentationModelAssemblerSupport<Regi
 		dto.setSubtitle(region.getSubtitle());
 		dto.setColor(region.getColor());
 		dto.setDescription(region.getDescription());
+		dto.setPopulation(region.getPopulation());
 		return dto;
 	}
 
@@ -35,6 +36,7 @@ public class RegionDtoAssembler extends RepresentationModelAssemblerSupport<Regi
 			.setSubtitle(dto.getSubtitle())
 			.setColor(dto.getColor())
 			.setDescription(dto.getDescription())
+			.setPopulation(dto.getPopulation())
 			.build();
 	}
 }

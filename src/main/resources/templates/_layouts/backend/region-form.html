@@ -41,6 +41,22 @@
 </div>
 
 <div class="form-group">
+	<label class="col-sm-3 control-label" for="subtitle">
+		население
+	</label>
+	<div class="col-sm-6 has-feedback">
+		<input
+				class="form-control" data-describedby="population-desc" data-description="population"
+				data-validate="population"
+				id="population" maxlength="25" name="population"
+				size="19" th:value="*{population}" value="${region.population}"/>
+		<span class="glyphicon form-control-feedback" id="population"></span>
+		<div id="population-desc"></div>
+		<errors cssClass="alert alert-danger" element="div" path="population"/>
+	</div>
+</div>
+
+<div class="form-group">
 	<label class="col-sm-3 control-label" for="description">
 		описание
 	</label>

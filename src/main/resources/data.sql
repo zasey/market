@@ -56,16 +56,16 @@ INSERT INTO region (id, name, subtitle, color, description) VALUES (6, 'Speyside
 <li>Number of distilleries: Over 60
 <li>Typical flavours: Apple, Vanilla, Oak, Malt, Nutmeg and Dried Fruit
 </ul>');
-INSERT INTO region (id, name, subtitle, color, description) VALUES (2, 'Highland', '', 'brown', 'The Highlands is Scotland''s largest whisky producing area, covering anywhere from the north of Glasgow (the Clyde estuary to the River Tay) all the way to Thurso in the north, not to mention the east and west regions excluding Speyside. Due to the large area, whisky in the Highlands is very diverse and offers a vast amount of different flavours so it''s hard to put a certain style on Whisky from this region.
+INSERT INTO region (id, name, subtitle, color, description, population) VALUES (2, 'Highland', '', 'brown', 'The Highlands is Scotland''s largest whisky producing area, covering anywhere from the north of Glasgow (the Clyde estuary to the River Tay) all the way to Thurso in the north, not to mention the east and west regions excluding Speyside. Due to the large area, whisky in the Highlands is very diverse and offers a vast amount of different flavours so it''s hard to put a certain style on Whisky from this region.
 <p><ul>
 <li>Number of distilleries: Over 25
 <li>Typical flavours: Fruit Cake, Malt, Oak, Heather, Dried Fruit and Smoke
-</ul>');
-INSERT INTO region (id, name, subtitle, color, description) VALUES (5, 'Lowland', '', 'yellow', 'Lowlands is the second biggest whisky region in terms of the area it covers, but it''s currently only home to fewer than five distilleries. The Lowlands region covers the south of Scotland up to the north of Glasgow and Edinburgh where it meets the border on the Highlands, the line follows the old county borders running from the Clyde estuary in the west to the River Tay in the east, anything south of this is to the border with England is classified as the ''Lowlands'' in whisky terms.
+</ul>',43657467);
+INSERT INTO region (id, name, subtitle, color, description, population) VALUES (5, 'Lowland', '', 'yellow', 'Lowlands is the second biggest whisky region in terms of the area it covers, but it''s currently only home to fewer than five distilleries. The Lowlands region covers the south of Scotland up to the north of Glasgow and Edinburgh where it meets the border on the Highlands, the line follows the old county borders running from the Clyde estuary in the west to the River Tay in the east, anything south of this is to the border with England is classified as the ''Lowlands'' in whisky terms.
 <p><ul>
 <li>Number of distilleries: Under 5
 <li>Typical flavours: Grass, Honeysuckle, Cream, Toffee, Toast and Cinnamon
-</ul>');
+</ul>', 1241352);
 
 INSERT INTO role (id, title) VALUES (0, 'ROLE_ADMIN');
 INSERT INTO role (id, title) VALUES (1, 'ROLE_STAFF');
@@ -85,6 +85,7 @@ INSERT INTO storage (id, available) VALUES (11, true);
 
 INSERT INTO user_account (id, email, password, name, active) VALUES (1, 'admin', '$2a$10$Cmwx2Xr/PVpkibiiDz0s7eaVGZHPUvAu5ivdVC5BJgSYbp3c06FY6', 'Admin', true);
 INSERT INTO user_account (id, email, password, name, active) VALUES (4, 'ivan.petrov@yandex.ru', '$2a$10$LfLg6vp4.wyowWP9ysg3F.yQ/udNKfRhGlHJ298xGCtBLC2dDX.OC', 'Ivan Petrov', true);
+INSERT INTO user_account (id, email, password, name, active) VALUES (5, 'arsen.zaseev@yandex.ru', '$2a$10$LfLg6vp4.wyowWP9ysg3F.yQ/udNKfRhGlHJ298xGCtBLC2dDX.OC', 'Ivan Petrov', true);
 
 INSERT INTO user_role (user_id, role_id) VALUES (1, 0);
 
